@@ -1,13 +1,20 @@
-import React from 'react';
-import './App.css';
-import TodoList from './components/TodoList';  // If the TodoList is inside 'components'
+// src/App.js
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './Pages/Header'; // <-- Import Header here
+import Home from './Pages/Home';
+import News from './Pages/News';
 
 
 function App() {
   return (
-    <div className="App">
-      <TodoList/>
-    </div>
+    <Router>
+      <Header /> {/* Now Header is recognized */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/news" element={<News />} />
+      
+      </Routes>
+    </Router>
   );
 }
 
