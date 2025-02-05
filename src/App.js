@@ -1,14 +1,24 @@
-import React from 'react';
-import './App.css';
-import TodoList from './components/TodoList';  // If the TodoList is inside 'components'
+import React, { useState, useEffect } from 'react';
+import LoginPage from './Loginapp/LoginPage';
+import LandingPage from './Loginapp/LandingPage';
 
+const App = () => {
+  const [page, setPage] = useState('login');
 
-function App() {
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    if (user) {
+      setPage('landing');
+    } else {
+      setPage('login');
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <TodoList/>
+    <div>
+      {page === 'login' ? <LoginPage /> : <LandingPage />}
     </div>
   );
-}
+};
 
 export default App;
