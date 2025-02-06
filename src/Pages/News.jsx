@@ -1,6 +1,11 @@
 // src/pages/News.js
 import React from 'react';
-import ent1 from './Pages/ent1.jpg';
+import ent1 from './ent1.jpg';
+import ent2 from './ent2.jpg';
+import tech1 from './tech1.jpg';
+import tech2 from './tech2.jpg';
+
+
 import './News.css';
 
 const News = () => {
