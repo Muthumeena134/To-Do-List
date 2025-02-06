@@ -1,6 +1,6 @@
 // src/components/Sidebar.js
 import React from 'react';
-import './Sidebar.css';
+import './Pages/Sidebar.css';
 
 const Sidebar = () => {
   return (
