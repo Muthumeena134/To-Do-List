@@ -1,29 +1,20 @@
 // src/pages/News.js
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const News = () => {
-  const [articles, setArticles] = useState([]);
-
-  useEffect(() => {
-    fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=YOUR_API_KEY')
-      .then(response => response.json())
-      .then(data => setArticles(data.articles));
-  }, []);
-
   return (
     <div>
-      <h2>News</h2>
-      <ul>
-        {articles.map((article, index) => (
-          <li key={index}>
-            <a href={article.url} target="_blank" rel="noopener noreferrer">
-              {article.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <h1>Latest News</h1>
+      <div className="article">
+        <h2>Article Title 1</h2>
+        <p>Content for article 1...</p>
+      </div>
+      <div className="article">
+        <h2>Article Title 2</h2>
+        <p>Content for article 2...</p>
+      </div>
     </div>
   );
-}
+};
 
 export default News;
