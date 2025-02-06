@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Pages/Header';
-import Sidebar from './Pages/Sidebar';
+
 import Home from './Pages/Home';
 import News from './Pages/News';
 import Sports from './Pages/Sports';
