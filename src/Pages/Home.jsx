@@ -5,7 +5,7 @@ const Home = () => {
     <div>
       <h1>BBC Clone - Home Page</h1>
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/4/47/BBC_logo_%282017%29.svg"
+        src="Assets/img/img1"
         alt="BBC Logo"
         style={{ width: '200px', margin: '20px 0' }}
       />
