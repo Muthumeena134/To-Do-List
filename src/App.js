@@ -8,12 +8,18 @@ import News from './Pages/News';
 import Sports from './Pages/Sports';
 import Entertainment from './Pages/Entertainment';
 
+
+
+
 function App() {
   return (
     <Router>
+     
+      
       <Header />
+      
       <div className="main-container">
-        <Sidebar />
+     
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
