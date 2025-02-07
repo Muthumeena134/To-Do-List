@@ -1,27 +1,19 @@
-// src/components/Header.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './styles.css';
+import SearchBar from './SearchBar';
+import ToggleBar from './ToggleBar';
 
 const Header = () => {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <header>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/news">News</Link>
-          </li>
-          <li>
-            <Link to="/sports">Sports</Link>
-          </li>
-          <li>
-            <Link to="/entertainment">Entertainment</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="navbar">
+        <button onClick={() => setToggle(!toggle)}>☰</button>
+        <h1>BBC Clone</h1>
+        <SearchBar />
+      </div>
+      <ToggleBar toggle={toggle} />
     </header>
   );
 };

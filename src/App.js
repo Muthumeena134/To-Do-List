@@ -1,36 +1,31 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Pages/Header';
 
-import Home from './Pages/Home';
-import News from './Pages/News';
-import Sports from './Pages/Sports';
-import Entertainment from './Pages/Entertainment';
+import HomePage from './Pages/Home';
+import NewsPage from './Pages/News';
+import SportsPage from './Pages/Sports';
 
+import RegisterPage from './Pages/RegisterPage';
+import SignInPage from './Pages/SignInPage';
 
-
-
-function App() {
+const App = () => {
   return (
     <Router>
-     
-      
-      <Header />
-      
-      <div className="main-container">
-     
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/sports" element={<Sports />} />
-            <Route path="/entertainment" element={<Entertainment />} />
-          </Routes>
-        </div>
+      <div>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/news" component={NewsPage} />
+          <Route path="/sports" component={SportsPage} />
+          <Route path="/entertainment" component={EntertainmentPage} />
+          <Route path="/register" component={RegisterPage} />
+          <Route path="/signin" component={SignInPage} />
+        </Switch>
+        <Footer />
       </div>
     </Router>
   );
-}
+};
 
 export default App;
